@@ -4,16 +4,17 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from src.bot.bot_main import dp, bot
+from src.config import WEBHOOK_URL
 from src.server.ctch_dt.router import router as router_bouquet
 from src.bot.bot_main import router as router_bot
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logging.info("lifespan")
-    await dp.start_polling(bot)
-    logging.info("bot start")
+    bot.set_webhook(WEBHOOK_URL)
+    logging.info(f"bot start, {await bot.get_webhook_info()}")
     yield
-    await dp.stop_polling(bot)
+    await bot.session.close()
 
 
 
