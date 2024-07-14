@@ -1,0 +1,12 @@
+{
+  "DB_USER":"postgres",
+  "DB_PASS":"ppap225678",
+  "DB_HOST":"localhost",
+  "DB_PORT":"5432",
+  "DB_NAME":"postgres",
+  "TOKEN":"7403932544:AAFaeWlDLjO30l5mCkABXro3Z3-_R-QAXy4",
+
+  "WEBHOOK_URL":"bloomingpetals.ru",
+  "WEBHOOK_PATH":"webhook"
+
+}
