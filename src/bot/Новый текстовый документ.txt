@@ -1,1 +1,0 @@
-curl -F "url=https://smart-oranges-give.loca.lt/webhook" https://api.telegram.org/bot7403932544:AAFaeWlDLjO30l5mCkABXro3Z3-_R-QAXy4/setWebhook

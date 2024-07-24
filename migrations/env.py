@@ -6,10 +6,12 @@ from sqlalchemy import pool
 from alembic import context
 
 from src.config import DB_HOST, DB_PORT, DB_USER, DB_NAME, DB_PASS
-from src.server.ctch_dt.model import bouquet_metadata
+from src.server.ctch_dt.bouquet.bouquet_model import bouquet_metadata
 
 import os
 import sys
+
+from src.server.ctch_dt.flower.flower_model import flower_metadata
 
 sys.path.append(os.path.join(sys.path[0], 'src'))
 
@@ -33,7 +35,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = [bouquet_metadata]
+target_metadata = [bouquet_metadata, flower_metadata]
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

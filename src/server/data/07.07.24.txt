@@ -1,2 +1,0 @@
-id,bouquet_name,photo_address,type_flowers,cost,count,add_at
-0,Rose,ad/ad/qw.png,[Rose],1000,10,

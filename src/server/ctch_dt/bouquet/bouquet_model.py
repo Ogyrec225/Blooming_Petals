@@ -8,6 +8,7 @@ bouquet = Table(
     bouquet_metadata,
     Column("id", Integer, primary_key=True),
     Column("bouquet_name", String, nullable=False, unique=True),
+    Column("description", String, nullable=True),
     Column("photo_address", String, nullable=False),
     Column("type_flowers", ARRAY(String), nullable=False),
     Column("cost", Integer, nullable=False),
